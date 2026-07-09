@@ -1,0 +1,22 @@
+# Development — namespace shopeasy-dev
+
+namespace: shopeasy-dev
+
+replicaCount: 1
+
+ingress:
+  enabled: true
+  className: alb
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+  hosts: []
+  paths: []
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 300m
+    memory: 256Mi
